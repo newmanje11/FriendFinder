@@ -4,11 +4,11 @@ var friendData = require("../data/friends");
 
 module.exports = function (app) {
 
-    app.get(".\data\friends.js" , function(req, res ) {
+    app.get("/api/friends" , function(req, res ) {
         res.json(friendData);
     })
 
-    app.post('.\data\friends.js', function(req, res) {
+    app.post('/api/friends', function(req, res) {
 		// Capture the user input object
 		var userInput = req.body;
 		// console.log('userInput = ' + JSON.stringify(userInput));
